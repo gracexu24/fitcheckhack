@@ -1,8 +1,36 @@
 .box {
-    margin-top: 2rem; /* set top margin */
-    margin-left: 2rem; /* set left margin */
-    width: 20rem;
-    height: 40rem;
-    background-color: #ff0000;
+
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+    padding: 1rem;
+    background-color: #ffcccc;
     border: 1px solid #ccc;
   }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-md-6 {
+    flex: 1;
+  }
+
+p.space {
+  line-height: 1.8;
+}
+
+.question {
+  display: flex;
+  margin-top: 1em;
+}
+
+.answer-choice {
+  margin: 5px;
+}
+
+h2 {
+  font-family: 'Homemade Apple', cursive;
+  color: black;
+}
