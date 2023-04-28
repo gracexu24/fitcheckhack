@@ -8,15 +8,6 @@
     border: 1px solid #ccc;
   }
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .col-md-6 {
-    flex: 1;
-  }
-
 p.space {
   line-height: 1.8;
 }
@@ -30,7 +21,19 @@ p.space {
   margin: 5px;
 }
 
-h2 {
-  font-family: 'Homemade Apple', cursive;
+h3 {
+  font-family:'Lato'; 
   color: black;
+}
+
+/* Set the height of the image container */
+.image-container {
+    height: 400px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+/* Set the size and spacing of the images */
+.image {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
 }
