@@ -8,12 +8,11 @@ const apiKey = "600d0fd9740296eff52816c58fa120fe";
 //   })
 //   .catch(error => console.error(error));
 
-var result; //string we will input into ai image generator
 var gender; // base this off of which gender box is checked and set to string "feminine" or "masucline"
 var aesthetic; //set to string of whichever aest was inputed 
 var city; 
 var state; 
-//result = "Outfit for " + weather + " day with a" + gender + " " + style + " style"; 
+var temp; 
 
 
 //buttons stuff 
@@ -46,9 +45,110 @@ function submitForm(){
   //getting data from api 
   fetch(url)
     .then(response => response.json())
-    .then(data => {console.log(`Current temperature in ${city},${state} is: ${data.main.temp} Kelvin. The weather is ${data.weather[0].description} `);
+    .then(data => {const resultElement = document.getElementById("result");
+    temp = ${data.main.temp} 
+    resultElement.textContent = `Current temperature in ${city}, ${state} is: ${data.main.temp} Kelvin. The weather is ${data.weather[0].description}`;
     })
     .catch(error => console.error(error));
+
+  
+    //replaceing images 
+    if(gender=="fem" ){
+      if(temp > 298){
+        //hot 
+        if(aesthetic == "street"){
+          var image = document.getElementById("1");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "costal"){
+          var image = document.getElementById("2");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "basic"){
+          var image = document.getElementById("3");
+          image.src = "/photos/streetfemhot/";
+        }
+      }
+      else if(temp> 273){
+        //mild 
+        if(aesthetic == "street"){
+          var image = document.getElementById("1");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "costal"){
+          var image = document.getElementById("2");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "basic"){
+          var image = document.getElementById("3");
+          image.src = "/photos/streetfemhot/";
+        }
+      }
+      else{
+        //cold 
+        if(aesthetic == "street"){
+          var image = document.getElementById("1");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "costal"){
+          var image = document.getElementById("2");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "basic"){
+          var image = document.getElementById("3");
+          image.src = "/photos/streetfemhot/";
+        }
+      }
+    }
+    else {
+      //masc
+      if(temp > 298){
+        //hot 
+        if(aesthetic == "street"){
+          var image = document.getElementById("1");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "costal"){
+          var image = document.getElementById("2");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "basic"){
+          var image = document.getElementById("3");
+          image.src = "/photos/streetfemhot/";
+        }
+      }
+      else if(temp> 273){
+        //mild 
+        if(aesthetic == "street"){
+          var image = document.getElementById("1");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "costal"){
+          var image = document.getElementById("2");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "basic"){
+          var image = document.getElementById("3");
+          image.src = "/photos/streetfemhot/";
+        }
+      }
+      else{
+        //cold 
+        if(aesthetic == "street"){
+          var image = document.getElementById("1");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "costal"){
+          var image = document.getElementById("2");
+          image.src = "/photos/streetfemhot/";
+        }
+        if(aesthetic == "basic"){
+          var image = document.getElementById("3");
+          image.src = "/photos/streetfemhot/";
+        }
+      }
+
+    }
 
 }
 
